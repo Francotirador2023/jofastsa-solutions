@@ -3,6 +3,7 @@ import { Target, Lightbulb, Heart, Rocket } from 'lucide-react';
 import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
 import { SEOHead } from '../components/seo/SEOHead';
+import jonyImg from '../assets/jony.png';
 
 export const About = () => {
     return (
@@ -99,7 +100,7 @@ export const About = () => {
                             <div className="max-w-sm w-full group relative overflow-hidden rounded-2xl bg-slate-900 border border-slate-800 shadow-2xl">
                                 <div className="aspect-[4/3] bg-slate-800 overflow-hidden relative">
                                     <img
-                                        src="/src/assets/jony.png"
+                                        src={jonyImg}
                                         alt="Jony R."
                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                     />

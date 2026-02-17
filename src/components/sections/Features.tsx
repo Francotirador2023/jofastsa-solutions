@@ -3,13 +3,18 @@ import { ArrowRight, Check, Zap, Shield, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../seo/SEOHead';
 
+// Import images
+import dataConsultingImg from '../../assets/data-consulting.jpg';
+import enterpriseSecurityImg from '../../assets/enterprise-security.jpg';
+import globalScalabilityImg from '../../assets/global-scalability.jpg';
+
 const features = [
     {
         title: 'Transformación Digital',
         slug: 'transformacion-digital',
         description: 'Modernizamos tu infraestructura tecnológica para competir en la era digital.',
         icon: Zap,
-        image: '/src/assets/data-consulting.jpg',
+        image: dataConsultingImg,
         benefits: ['Reducción de costos operativos', 'Automatización de procesos', 'Mejora en la toma de decisiones'],
     },
     {
@@ -17,7 +22,7 @@ const features = [
         slug: 'seguridad-empresarial',
         description: 'Protocolos de ciberseguridad avanzados para proteger tus activos más valiosos.',
         icon: Shield,
-        image: '/src/assets/enterprise-security.jpg',
+        image: enterpriseSecurityImg,
         benefits: ['Encriptación de extremo a extremo', 'Auditorías de seguridad continuas', 'Cumplimiento normativo (GDPR/HIPAA)'],
     },
     {
@@ -25,7 +30,7 @@ const features = [
         slug: 'escalabilidad-global',
         description: 'Arquitecturas cloud-native diseñadas para crecer con tu negocio sin límites.',
         icon: Users,
-        image: '/src/assets/global-scalability.jpg',
+        image: globalScalabilityImg,
         benefits: ['Infraestructura Serverless', 'Balanceo de carga global', 'Alta disponibilidad 99.99%'],
     },
 ];

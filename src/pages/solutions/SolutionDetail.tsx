@@ -5,6 +5,11 @@ import { ArrowLeft, PlayCircle, Layers } from 'lucide-react';
 import { Navbar } from '../../components/layout/Navbar';
 import { Footer } from '../../components/layout/Footer';
 
+// Import images
+import dataConsultingImg from '../../assets/data-consulting.jpg';
+import enterpriseSecurityImg from '../../assets/enterprise-security.jpg';
+import globalScalabilityImg from '../../assets/global-scalability.jpg';
+
 const solutions = {
     'transformacion-digital': {
         title: 'Transformación Digital',
@@ -16,7 +21,7 @@ const solutions = {
             'Migración y Modernización',
             'Capacitación y Soporte Continuo'
         ],
-        demoImage: '/src/assets/data-consulting.jpg'
+        demoImage: dataConsultingImg
     },
     'seguridad-empresarial': {
         title: 'Seguridad Empresarial',
@@ -28,7 +33,7 @@ const solutions = {
             'Monitoreo 24/7 con IA',
             'Protocolos de Respuesta a Incidentes'
         ],
-        demoImage: '/src/assets/enterprise-security.jpg'
+        demoImage: enterpriseSecurityImg
     },
     'escalabilidad-global': {
         title: 'Escalabilidad Global',
@@ -40,7 +45,7 @@ const solutions = {
             'Optimización de Bases de Datos',
             'Auto-scaling Inteligente'
         ],
-        demoImage: '/src/assets/global-scalability.jpg'
+        demoImage: globalScalabilityImg
     }
 };
 
