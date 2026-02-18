@@ -18,15 +18,17 @@ export const Footer = () => {
                         </p>
                         <div className="flex gap-4 pt-2">
                             {[
-                                { Icon: Github, href: '#' },
+                                { Icon: Github, href: 'https://github.com/Francotirador2023' },
                                 { Icon: Twitter, href: '#' },
-                                { Icon: Linkedin, href: '#' },
+                                { Icon: Linkedin, href: 'https://linkedin.com/in/jofastsa' },
                                 { Icon: Mail, href: 'mailto:francojonysenati@gmail.com' },
                                 { Icon: MessageCircle, href: 'https://wa.me/51928926775' }
                             ].map(({ Icon, href }, i) => (
                                 <a
                                     key={i}
                                     href={href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="p-2 rounded-full bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-blue-500 transition-all hover:-translate-y-1"
                                 >
                                     <Icon className="w-5 h-5" />
@@ -35,14 +37,19 @@ export const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Links */}
+                    {/* Enlaces */}
                     <div>
                         <h4 className="font-semibold text-white mb-6">Empresa</h4>
                         <ul className="space-y-3">
-                            {['Sobre Nosotros', 'Carreras', 'Blog', 'Prensa'].map((item) => (
-                                <li key={item}>
-                                    <Link to="#" className="text-slate-400 hover:text-blue-400 transition-colors">
-                                        {item}
+                            {[
+                                { name: 'Sobre Nosotros', path: '/nosotros' },
+                                { name: 'Especialidades', path: '/servicios' },
+                                { name: 'Blog', path: '#' },
+                                { name: 'Prensa', path: '#' }
+                            ].map((item) => (
+                                <li key={item.name}>
+                                    <Link to={item.path} className="text-slate-400 hover:text-blue-400 transition-colors">
+                                        {item.name}
                                     </Link>
                                 </li>
                             ))}
