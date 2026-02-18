@@ -20,7 +20,7 @@ export const Footer = () => {
                             {[
                                 { Icon: Github, href: 'https://github.com/Francotirador2023' },
                                 { Icon: Twitter, href: '#' },
-                                { Icon: Linkedin, href: 'https://linkedin.com/in/jofastsa' },
+                                { Icon: Linkedin, href: 'https://www.linkedin.com/in/jony-franco-163521358' },
                                 { Icon: Mail, href: 'mailto:francojonysenati@gmail.com' },
                                 { Icon: MessageCircle, href: 'https://wa.me/51928926775' }
                             ].map(({ Icon, href }, i) => (
@@ -56,14 +56,19 @@ export const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Services */}
+                    {/* Servicios */}
                     <div>
                         <h4 className="font-semibold text-white mb-6">Servicios</h4>
                         <ul className="space-y-3">
-                            {['Desarrollo Web', 'Aplicaciones Móviles', 'Consultoría Cloud', 'Diseño UI/UX'].map((item) => (
-                                <li key={item}>
-                                    <Link to="#" className="text-slate-400 hover:text-blue-400 transition-colors">
-                                        {item}
+                            {[
+                                { name: 'Desarrollo Web', path: '/soluciones/transformacion-digital' },
+                                { name: 'Aplicaciones Móviles', path: '/contacto' },
+                                { name: 'Consultoría Cloud', path: '/soluciones/escalabilidad-global' },
+                                { name: 'Diseño UI/UX', path: '/contacto' }
+                            ].map((item) => (
+                                <li key={item.name}>
+                                    <Link to={item.path} className="text-slate-400 hover:text-blue-400 transition-colors">
+                                        {item.name}
                                     </Link>
                                 </li>
                             ))}
