@@ -1,4 +1,4 @@
-import { Github, Twitter, Linkedin, Mail, MessageCircle } from 'lucide-react';
+import { Github, Linkedin, Mail, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const Footer = () => {
@@ -19,7 +19,6 @@ export const Footer = () => {
                         <div className="flex gap-4 pt-2">
                             {[
                                 { Icon: Github, href: 'https://github.com/Francotirador2023' },
-                                { Icon: Twitter, href: '#' },
                                 { Icon: Linkedin, href: 'https://www.linkedin.com/in/jony-franco-163521358' },
                                 { Icon: Mail, href: 'mailto:francojonysenati@gmail.com' },
                                 { Icon: MessageCircle, href: 'https://wa.me/51928926775' }
@@ -43,9 +42,7 @@ export const Footer = () => {
                         <ul className="space-y-3">
                             {[
                                 { name: 'Sobre Nosotros', path: '/nosotros' },
-                                { name: 'Especialidades', path: '/servicios' },
-                                { name: 'Blog', path: '#' },
-                                { name: 'Prensa', path: '#' }
+                                { name: 'Especialidades', path: '/servicios' }
                             ].map((item) => (
                                 <li key={item.name}>
                                     <Link to={item.path} className="text-slate-400 hover:text-blue-400 transition-colors">
@@ -76,12 +73,8 @@ export const Footer = () => {
                     </div>
                 </div>
 
-                <div className="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+                <div className="pt-8 border-t border-slate-900 flex flex-col items-center text-sm text-slate-500">
                     <p>&copy; {new Date().getFullYear()} Jofastsa Consulting. Todos los derechos reservados.</p>
-                    <div className="flex gap-8">
-                        <Link to="#" className="hover:text-slate-300">Privacidad</Link>
-                        <Link to="#" className="hover:text-slate-300">Términos</Link>
-                    </div>
                 </div>
             </div>
         </footer>

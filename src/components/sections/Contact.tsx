@@ -6,18 +6,36 @@ export const Contact = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSent, setIsSent] = useState(false);
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsSubmitting(true);
 
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500));
+        const form = e.currentTarget;
+        const formData = new FormData(form);
 
-        setIsSubmitting(false);
-        setIsSent(true);
+        try {
+            const response = await fetch("https://formspree.io/f/maqdvrrr", {
+                method: "POST",
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
 
-        // Reset after showing success
-        setTimeout(() => setIsSent(false), 5000);
+            if (response.ok) {
+                setIsSent(true);
+                form.reset(); // Clear the form fields
+            } else {
+                // Here you could handle specific errors, for now just log
+                console.error("Form submission failed");
+                alert("Hubo un error al enviar el mensaje. Por favor intenta de nuevo.");
+            }
+        } catch (error) {
+            console.error("Error submitting form:", error);
+            alert("Error de red. Por favor verifica tu conexión e intenta de nuevo.");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -89,6 +107,7 @@ export const Contact = () => {
                                         <input
                                             required
                                             type="text"
+                                            name="name"
                                             className="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-800 text-white focus:outline-none focus:border-blue-500 transition-colors"
                                             placeholder="Juan Pérez"
                                         />
@@ -98,6 +117,7 @@ export const Contact = () => {
                                         <input
                                             required
                                             type="email"
+                                            name="email"
                                             className="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-800 text-white focus:outline-none focus:border-blue-500 transition-colors"
                                             placeholder="juan@empresa.com"
                                         />
@@ -108,6 +128,7 @@ export const Contact = () => {
                                     <label className="text-sm font-medium text-slate-400">Mensaje</label>
                                     <textarea
                                         required
+                                        name="message"
                                         rows={4}
                                         className="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-800 text-white focus:outline-none focus:border-blue-500 transition-colors resize-none"
                                         placeholder="Cuéntanos sobre tu idea..."

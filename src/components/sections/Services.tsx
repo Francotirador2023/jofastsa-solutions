@@ -13,13 +13,13 @@ const services = [
         icon: Smartphone,
         title: 'Apps Móviles',
         description: 'Aplicaciones nativas y multiplataforma para iOS y Android que tus usuarios amarán.',
-        link: '/contacto'
+        link: '/soluciones/apps-moviles'
     },
     {
         icon: Brain,
         title: 'IA y Automatización',
         description: 'Agentes inteligentes y flujos automatizados con n8n para reducir costos operativos.',
-        link: '/contacto' // Could link to a future AI solution page
+        link: '/soluciones/ia-automatizacion'
     },
     {
         icon: Cloud,
@@ -31,7 +31,7 @@ const services = [
         icon: Globe,
         title: 'E-Commerce',
         description: 'Tiendas en línea robustas y optimizadas para maximizar tus ventas y conversiones.',
-        link: '/contacto'
+        link: '/soluciones/ecommerce-avanzado'
     },
     {
         icon: Shield,

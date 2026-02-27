@@ -46,6 +46,42 @@ const solutions = {
             'Auto-scaling Inteligente'
         ],
         demoImage: globalScalabilityImg
+    },
+    'apps-moviles': {
+        title: 'Desarrollo de Apps Móviles',
+        subtitle: 'Experiencias nativas que tus usuarios amarán.',
+        description: 'Creamos aplicaciones móviles robustas para iOS y Android, enfocadas en rendimiento, diseño UI/UX premium y alta conversión.',
+        steps: [
+            'Diseño de Prototipos Interactivos',
+            'Desarrollo Frontend Multiplataforma',
+            'Integración de APIs y Backend',
+            'Pruebas de Rendimiento y Publicación en Tiendas'
+        ],
+        demoImage: dataConsultingImg // Placeholder, should ideally be a mobile app image
+    },
+    'ia-automatizacion': {
+        title: 'IA y Automatización',
+        subtitle: 'Multiplica la eficiencia de tu equipo con Inteligencia Artificial.',
+        description: 'Implementamos agentes autónomos y flujos de trabajo automatizados (n8n, Make) que reducen el trabajo manual en un 80%.',
+        steps: [
+            'Mapeo de Procesos Repetitivos',
+            'Entrenamiento de Modelos de IA personalizados',
+            'Orquestación de Flujos de Trabajo',
+            'Monitoreo de Eficiencia y Ajustes'
+        ],
+        demoImage: enterpriseSecurityImg // Placeholder
+    },
+    'ecommerce-avanzado': {
+        title: 'E-Commerce Avanzado',
+        subtitle: 'Tiendas online diseñadas para maximizar tus ventas.',
+        description: 'Desarrollamos plataformas de comercio electrónico ultra-rápidas, escalables y optimizadas para conversión en cada paso del embudo.',
+        steps: [
+            'Diseño de Experiencia de Compra (UX)',
+            'Desarrollo de Catálogo Dinámico y Checkout',
+            'Integración de Pasarelas de Pago Globales',
+            'Estrategias de Retención (Correos Abandonados, Upselling)'
+        ],
+        demoImage: globalScalabilityImg // Placeholder
     }
 };
 
