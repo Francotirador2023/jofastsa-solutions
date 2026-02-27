@@ -43,7 +43,7 @@ const services = [
 
 export const Services = () => {
     return (
-        <section className="py-32 relative border-t border-slate-900" id="servicios">
+        <section className="py-32 relative border-t border-[#1A1A1A]" id="servicios">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center max-w-3xl mx-auto mb-20">
                     <h2 className="text-sm font-semibold tracking-widest text-slate-500 uppercase mb-3">
@@ -71,11 +71,11 @@ export const Services = () => {
                                 to={service.link}
                                 className="block h-full p-8 rounded-2xl bg-[#0F0F0F] border border-[#1A1A1A] hover:border-slate-700 hover:bg-[#141414] transition-all duration-500 group relative overflow-hidden"
                             >
-                                <div className="absolute inset-0 bg-gradient-to-br from-slate-800/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                <div className="absolute inset-0 bg-gradient-to-br from-[#1A1A1A]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                                 <div className="relative z-10">
-                                    <div className="w-12 h-12 rounded-lg bg-slate-900/50 border border-slate-800 flex items-center justify-center mb-6 group-hover:bg-slate-800 transition-all duration-300">
-                                        <service.icon className="w-5 h-5 text-slate-300 group-hover:text-white" />
+                                    <div className="w-12 h-12 rounded-lg bg-[#141414] border border-[#222222] flex items-center justify-center mb-6 group-hover:bg-[#1A1A1A] transition-all duration-300">
+                                        <service.icon className="w-5 h-5 text-[#A1A1AA] group-hover:text-[#FAFAFA]" />
                                     </div>
                                     <h3 className="text-xl font-medium tracking-tight text-slate-200 mb-3 group-hover:text-white transition-colors flex items-center gap-2">
                                         {service.title}

@@ -37,9 +37,9 @@ export const Navbar = () => {
                         <img
                             src="/logo.png"
                             alt="Jofastsa Solutions"
-                            className="h-12 w-auto group-hover:scale-105 transition-transform drop-shadow-[0_0_15px_rgba(37,99,235,0.5)]"
+                            className="h-10 w-auto group-hover:scale-105 transition-transform"
                         />
-                        <span className="text-xl font-bold text-white tracking-wide hidden sm:block">
+                        <span className="text-lg font-bold text-[#FAFAFA] tracking-wide hidden sm:block">
                             JOFASTSA CONSULTING
                         </span>
                     </Link>
@@ -52,16 +52,16 @@ export const Navbar = () => {
                                 <Link
                                     key={link.name}
                                     to={link.path}
-                                    className={`text-sm font-medium transition-colors relative group ${isActive ? 'text-white' : 'text-slate-300 hover:text-white'
+                                    className={`text-sm font-light transition-colors relative group ${isActive ? 'text-[#FAFAFA]' : 'text-[#A1A1AA] hover:text-[#FAFAFA]'
                                         }`}
                                 >
                                     {link.name}
-                                    <span className={`absolute -bottom-1 left-0 h-0.5 bg-slate-300 transition-all ${isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                                    <span className={`absolute -bottom-1 left-0 h-0.5 bg-[#A1A1AA] transition-all ${isActive ? 'w-full' : 'w-0 group-hover:w-full'
                                         }`} />
                                 </Link>
                             );
                         })}
-                        <Link to="/contacto" className="px-6 py-2.5 rounded-full bg-slate-100 hover:bg-white text-slate-900 text-sm font-medium transition-all shadow-[0_0_15px_rgba(255,255,255,0.05)]">
+                        <Link to="/contacto" className="px-6 py-2.5 rounded-full bg-[#FAFAFA] hover:bg-white text-[#0A0A0A] text-sm font-medium transition-all shadow-[0_0_15px_rgba(255,255,255,0.02)]">
                             Cotizar Proyecto
                         </Link>
                     </div>
@@ -91,13 +91,13 @@ export const Navbar = () => {
                                     key={link.name}
                                     to={link.path}
                                     onClick={() => setIsOpen(false)}
-                                    className="block text-lg font-medium text-slate-300 hover:text-white hover:pl-2 transition-all"
+                                    className="block text-lg font-light text-[#A1A1AA] hover:text-[#FAFAFA] hover:pl-2 transition-all"
                                 >
                                     {link.name}
                                 </Link>
                             ))}
                             <div className="pt-4">
-                                <button className="w-full py-3 rounded-xl bg-slate-100 hover:bg-white text-slate-900 font-medium transition-colors">
+                                <button className="w-full py-3 rounded-xl bg-[#FAFAFA] hover:bg-white text-[#0A0A0A] font-medium transition-colors">
                                     Cotizar Proyecto
                                 </button>
                             </div>

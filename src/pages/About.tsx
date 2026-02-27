@@ -59,7 +59,7 @@ export const About = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: i * 0.2 }}
                                 viewport={{ once: true }}
-                                className="bg-slate-950 p-8 rounded-2xl border border-slate-800 hover:border-blue-500/50 transition-colors"
+                                className="bg-[#0A0A0A] p-8 rounded-2xl border border-[#1A1A1A] hover:border-[#27272A] transition-colors"
                             >
                                 <div className="w-12 h-12 bg-[#222222] rounded-lg flex items-center justify-center text-slate-300 mb-6">
                                     <item.icon className="w-5 h-5" />
@@ -97,8 +97,8 @@ export const About = () => {
                         </div>
 
                         <div className="flex justify-center">
-                            <div className="max-w-sm w-full group relative overflow-hidden rounded-2xl bg-slate-900 border border-slate-800 shadow-2xl">
-                                <div className="aspect-[4/3] bg-slate-800 overflow-hidden relative">
+                            <div className="max-w-sm w-full group relative overflow-hidden rounded-2xl bg-[#0F0F0F] border border-[#1A1A1A] shadow-2xl">
+                                <div className="aspect-[4/3] bg-[#141414] overflow-hidden relative">
                                     <img
                                         src={jonyImg}
                                         alt="Jony R."
