@@ -43,18 +43,18 @@ const services = [
 
 export const Services = () => {
     return (
-        <section className="py-24 bg-slate-950 relative" id="servicios">
+        <section className="py-32 relative border-t border-slate-900" id="servicios">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center max-w-3xl mx-auto mb-20">
-                    <h2 className="text-base font-semibold text-blue-500 tracking-wide uppercase mb-2">
-                        Nuestros Servicios
+                    <h2 className="text-sm font-semibold tracking-widest text-slate-500 uppercase mb-3">
+                        Nuestras Capacidades
                     </h2>
-                    <p className="text-3xl md:text-5xl font-bold text-white mb-6">
-                        Soluciones integrales para tu
-                        <span className="text-slate-500"> transformación digital</span>
+                    <p className="text-4xl md:text-5xl font-medium tracking-tight text-white mb-6">
+                        Soluciones tecnológicas para
+                        <span className="text-slate-400"> la empresa moderna</span>
                     </p>
-                    <p className="text-lg text-slate-400">
-                        Combinamos diseño innovador con ingeniería robusta para entregar resultados excepcionales.
+                    <p className="text-lg text-slate-400 font-light">
+                        Ingeniería de software de alta precisión diseñada para maximizar el rendimiento y la escalabilidad de sus operaciones.
                     </p>
                 </div>
 
@@ -69,18 +69,18 @@ export const Services = () => {
                         >
                             <Link
                                 to={service.link}
-                                className="block h-full p-8 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-blue-500/50 hover:bg-slate-900/80 transition-all duration-300 group relative overflow-hidden"
+                                className="block h-full p-8 rounded-2xl bg-[#0F0F0F] border border-[#1A1A1A] hover:border-slate-700 hover:bg-[#141414] transition-all duration-500 group relative overflow-hidden"
                             >
-                                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                                <div className="absolute inset-0 bg-gradient-to-br from-slate-800/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                                 <div className="relative z-10">
-                                    <div className="w-14 h-14 rounded-xl bg-blue-500/10 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-blue-500/20 transition-all duration-300">
-                                        <service.icon className="w-7 h-7 text-blue-500 group-hover:text-blue-400" />
+                                    <div className="w-12 h-12 rounded-lg bg-slate-900/50 border border-slate-800 flex items-center justify-center mb-6 group-hover:bg-slate-800 transition-all duration-300">
+                                        <service.icon className="w-5 h-5 text-slate-300 group-hover:text-white" />
                                     </div>
-                                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors flex items-center gap-2">
+                                    <h3 className="text-xl font-medium tracking-tight text-slate-200 mb-3 group-hover:text-white transition-colors flex items-center gap-2">
                                         {service.title}
                                     </h3>
-                                    <p className="text-slate-400 leading-relaxed">
+                                    <p className="text-slate-400 leading-relaxed font-light text-sm">
                                         {service.description}
                                     </p>
                                 </div>

@@ -37,22 +37,22 @@ const features = [
 
 export const Features = () => {
     return (
-        <section className="py-24 bg-slate-950 relative overflow-hidden" id="caracteristicas">
+        <section className="py-32 relative overflow-hidden" id="caracteristicas">
             {/* Background elements consistent with Premium+ style */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-[10%] left-[-5%] w-[30%] h-[30%] bg-blue-500/5 rounded-full blur-[100px]" />
                 <div className="absolute bottom-[20%] right-[-5%] w-[40%] h-[40%] bg-indigo-500/5 rounded-full blur-[120px]" />
 
                 {/* Subtle Grid Overlay */}
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808005_1px,transparent_1px),linear-gradient(to_bottom,#80808005_1px,transparent_1px)] bg-[size:50px_50px]" />
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808005_1px,transparent_1px),linear-gradient(to_bottom,#80808005_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_20%,transparent_100%)]" />
             </div>
 
             <SEOHead title="Soluciones Empresariales" description="Descubre nuestras soluciones de transformación digital, ciberseguridad y escalabilidad." />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mb-20 text-center">
-                    <h2 className="text-4xl font-bold text-white mb-6">Por qué elegir Jofastsa</h2>
-                    <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+                    <h2 className="text-4xl font-medium tracking-tight text-white mb-6">Por qué elegir Jofastsa</h2>
+                    <p className="text-lg font-light text-slate-400 max-w-3xl mx-auto">
                         No solo escribimos código. Diseñamos soluciones estratégicas que se integran perfectamente con tus objetivos de negocio.
                     </p>
                 </div>
@@ -69,18 +69,18 @@ export const Features = () => {
                         >
                             {/* Content */}
                             <div className="flex-1 space-y-8">
-                                <div className="w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center">
-                                    <feature.icon className="w-8 h-8 text-blue-500" />
+                                <div className="w-12 h-12 rounded-lg bg-[#141414] border border-[#222222] flex items-center justify-center">
+                                    <feature.icon className="w-5 h-5 text-slate-300" />
                                 </div>
-                                <h3 className="text-3xl font-bold text-white">{feature.title}</h3>
-                                <p className="text-lg text-slate-400 leading-relaxed">
+                                <h3 className="text-3xl font-medium tracking-tight text-white">{feature.title}</h3>
+                                <p className="text-lg font-light text-slate-400 leading-relaxed">
                                     {feature.description}
                                 </p>
 
                                 <ul className="space-y-4">
                                     {feature.benefits.map((benefit, i) => (
-                                        <li key={i} className="flex items-start gap-3 text-slate-300">
-                                            <Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
+                                        <li key={i} className="flex items-start gap-3 text-slate-300 font-light text-sm">
+                                            <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
                                             {benefit}
                                         </li>
                                     ))}
@@ -94,8 +94,8 @@ export const Features = () => {
 
                             {/* Visual/Image */}
                             <div className="flex-1 w-full">
-                                <div className="aspect-video w-full relative rounded-3xl overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700/50 group">
-                                    <div className="absolute inset-0 bg-blue-500/10 group-hover:bg-blue-500/0 transition-colors z-10" />
+                                <div className="aspect-video w-full relative rounded-2xl overflow-hidden bg-[#0A0A0A] border border-[#1A1A1A] group">
+                                    <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 z-10" />
                                     <img
                                         src={feature.image}
                                         alt={feature.title}

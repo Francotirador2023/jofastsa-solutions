@@ -27,7 +27,7 @@ export const Navbar = () => {
     return (
         <nav
             className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled
-                ? 'bg-slate-900/80 backdrop-blur-md border-b border-slate-800'
+                ? 'bg-[#0A0A0A]/80 backdrop-blur-md border-b border-[#1A1A1A]'
                 : 'bg-transparent'
                 }`}
         >
@@ -56,12 +56,12 @@ export const Navbar = () => {
                                         }`}
                                 >
                                     {link.name}
-                                    <span className={`absolute -bottom-1 left-0 h-0.5 bg-blue-500 transition-all ${isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                                    <span className={`absolute -bottom-1 left-0 h-0.5 bg-slate-300 transition-all ${isActive ? 'w-full' : 'w-0 group-hover:w-full'
                                         }`} />
                                 </Link>
                             );
                         })}
-                        <Link to="/contacto" className="px-6 py-2.5 rounded-full bg-slate-800 hover:bg-slate-700 text-white text-sm font-medium transition-all border border-slate-700 hover:border-blue-500/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.2)]">
+                        <Link to="/contacto" className="px-6 py-2.5 rounded-full bg-slate-100 hover:bg-white text-slate-900 text-sm font-medium transition-all shadow-[0_0_15px_rgba(255,255,255,0.05)]">
                             Cotizar Proyecto
                         </Link>
                     </div>
@@ -83,7 +83,7 @@ export const Navbar = () => {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-slate-950 border-b border-slate-800"
+                        className="md:hidden bg-[#0A0A0A] border-b border-[#1A1A1A]"
                     >
                         <div className="px-4 py-8 space-y-4">
                             {navLinks.map((link) => (
@@ -97,7 +97,7 @@ export const Navbar = () => {
                                 </Link>
                             ))}
                             <div className="pt-4">
-                                <button className="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium transition-colors">
+                                <button className="w-full py-3 rounded-xl bg-slate-100 hover:bg-white text-slate-900 font-medium transition-colors">
                                     Cotizar Proyecto
                                 </button>
                             </div>

@@ -39,9 +39,9 @@ export const Contact = () => {
     };
 
     return (
-        <section className="py-24 bg-slate-900 relative overflow-hidden" id="contacto">
+        <section className="py-32 relative overflow-hidden" id="contacto">
             {/* Background Decor */}
-            <div className="absolute top-0 right-0 -mr-20 -mt-20 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[80px] pointer-events-none" />
+            <div className="absolute top-0 right-0 -mr-20 -mt-20 w-[500px] h-[500px] bg-slate-800/10 rounded-full blur-[100px] pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -53,9 +53,9 @@ export const Contact = () => {
                         className="space-y-8"
                     >
                         <div>
-                            <h2 className="text-4xl font-bold text-white mb-4">Hablemos de tu Proyecto</h2>
-                            <p className="text-xl text-slate-400">
-                                ¿Listo para escalar tu negocio? Agenda una consulta gratuita o envíanos un mensaje.
+                            <h2 className="text-4xl font-medium tracking-tight text-white mb-4">Hablemos de tu Proyecto</h2>
+                            <p className="text-lg font-light text-slate-400">
+                                ¿Listo para escalar tu negocio? Agenda una consulta gratuita o envíanos un mensaje directo.
                             </p>
                         </div>
 
@@ -65,13 +65,13 @@ export const Contact = () => {
                                 { icon: Phone, text: '+51 928 926 775', label: 'WhatsApp' },
                                 { icon: MapPin, text: 'Lima, Perú', label: 'Visítanos' },
                             ].map((item, index) => (
-                                <div key={index} className="flex items-center gap-4">
-                                    <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-blue-500">
+                                <div key={index} className="flex items-center gap-4 group">
+                                    <div className="w-12 h-12 rounded-full bg-[#141414] border border-[#222222] flex items-center justify-center text-slate-300 group-hover:text-white group-hover:bg-[#1A1A1A] transition-colors">
                                         <item.icon className="w-5 h-5" />
                                     </div>
                                     <div>
-                                        <p className="text-sm text-slate-500">{item.label}</p>
-                                        <p className="text-lg font-medium text-white">{item.text}</p>
+                                        <p className="text-sm text-slate-500 font-medium">{item.label}</p>
+                                        <p className="text-lg font-medium tracking-tight text-white">{item.text}</p>
                                     </div>
                                 </div>
                             ))}
@@ -83,7 +83,7 @@ export const Contact = () => {
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="bg-slate-950 p-8 rounded-2xl border border-slate-800"
+                        className="bg-[#0A0A0A] p-8 md:p-10 rounded-2xl border border-[#1A1A1A] relative"
                     >
                         {isSent ? (
                             <div className="h-full flex flex-col items-center justify-center text-center py-12">
@@ -108,7 +108,7 @@ export const Contact = () => {
                                             required
                                             type="text"
                                             name="name"
-                                            className="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-800 text-white focus:outline-none focus:border-blue-500 transition-colors"
+                                            className="w-full px-4 py-3 rounded-lg bg-[#141414] border border-[#222222] text-white focus:outline-none focus:border-slate-500 transition-colors"
                                             placeholder="Juan Pérez"
                                         />
                                     </div>
@@ -118,7 +118,7 @@ export const Contact = () => {
                                             required
                                             type="email"
                                             name="email"
-                                            className="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-800 text-white focus:outline-none focus:border-blue-500 transition-colors"
+                                            className="w-full px-4 py-3 rounded-lg bg-[#141414] border border-[#222222] text-white focus:outline-none focus:border-slate-500 transition-colors"
                                             placeholder="juan@empresa.com"
                                         />
                                     </div>
@@ -130,14 +130,14 @@ export const Contact = () => {
                                         required
                                         name="message"
                                         rows={4}
-                                        className="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-800 text-white focus:outline-none focus:border-blue-500 transition-colors resize-none"
+                                        className="w-full px-4 py-3 rounded-lg bg-[#141414] border border-[#222222] text-white focus:outline-none focus:border-slate-500 transition-colors resize-none"
                                         placeholder="Cuéntanos sobre tu idea..."
                                     />
                                 </div>
 
                                 <button
                                     disabled={isSubmitting}
-                                    className="w-full py-4 rounded-lg bg-gradient-to-r from-blue-600 to-violet-600 text-white font-bold hover:shadow-lg hover:shadow-blue-500/25 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                                    className="w-full py-4 rounded-xl bg-slate-100 text-slate-900 font-medium hover:bg-white transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
                                 >
                                     {isSubmitting ? (
                                         <>

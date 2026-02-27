@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Target, Lightbulb, Heart, Rocket } from 'lucide-react';
+import { Target, Lightbulb, Heart } from 'lucide-react';
 import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
 import { SEOHead } from '../components/seo/SEOHead';
@@ -7,7 +7,7 @@ import jonyImg from '../assets/jony.png';
 
 export const About = () => {
     return (
-        <div className="min-h-screen bg-slate-950 text-slate-50">
+        <div className="min-h-screen bg-[#0A0A0A] text-slate-50">
             <SEOHead title="Nosotros" description="Conoce a Jofastsa Consulting, tu socio en innovación tecnológica." />
             <Navbar />
 
@@ -30,23 +30,23 @@ export const About = () => {
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="text-4xl md:text-6xl font-bold text-white mb-6"
+                            className="text-4xl md:text-6xl font-medium tracking-tight text-white mb-6"
                         >
-                            Innovación con <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Propósito</span>
+                            Innovación con <span className="text-slate-400 font-light">Propósito</span>
                         </motion.h1>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 }}
-                            className="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed"
+                            className="text-lg text-slate-400 font-light max-w-3xl mx-auto leading-relaxed"
                         >
-                            En Jofastsa Consulting, no solo asesoramos; construimos la infraestructura de datos que permite a las empresas escalar con inteligencia y precisión técnica.
+                            En Jofastsa Consulting, no solo asesoramos; construimos la infraestructura tecnológica que permite a las empresas escalar con inteligencia y precisión.
                         </motion.p>
                     </div>
                 </section>
 
                 {/* Values Grid */}
-                <section className="py-16 px-8 bg-slate-900/50">
+                <section className="py-24 px-8 border-t border-[#1A1A1A]">
                     <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
                         {[
                             { icon: Target, title: 'Misión', desc: 'Democratizar el acceso a arquitecturas de datos de alto nivel, permitiendo a negocios de todos los tamaños tomar decisiones basadas en evidencia.' },
@@ -61,11 +61,11 @@ export const About = () => {
                                 viewport={{ once: true }}
                                 className="bg-slate-950 p-8 rounded-2xl border border-slate-800 hover:border-blue-500/50 transition-colors"
                             >
-                                <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 mb-6">
-                                    <item.icon className="w-6 h-6" />
+                                <div className="w-12 h-12 bg-[#222222] rounded-lg flex items-center justify-center text-slate-300 mb-6">
+                                    <item.icon className="w-5 h-5" />
                                 </div>
-                                <h3 className="text-xl font-bold text-white mb-4">{item.title}</h3>
-                                <p className="text-slate-400 leading-relaxed">{item.desc}</p>
+                                <h3 className="text-xl font-medium tracking-tight text-white mb-4">{item.title}</h3>
+                                <p className="text-slate-400 leading-relaxed font-light text-sm">{item.desc}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -81,8 +81,8 @@ export const About = () => {
                             { label: 'Capacidad Cloud', value: 'Multi-Cloud' }
                         ].map((stat) => (
                             <div key={stat.label}>
-                                <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
-                                <div className="text-sm text-slate-500 uppercase tracking-wider">{stat.label}</div>
+                                <div className="text-4xl font-medium tracking-tight text-white mb-2">{stat.value}</div>
+                                <div className="text-xs text-slate-500 font-mono uppercase tracking-widest">{stat.label}</div>
                             </div>
                         ))}
                     </div>
@@ -105,12 +105,12 @@ export const About = () => {
                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                     />
                                 </div>
-                                <div className="p-8 text-center">
-                                    <h3 className="text-2xl font-bold text-white">Jony R.</h3>
-                                    <p className="text-blue-400 font-semibold mb-6">Founder & Lead Data Engineer</p>
-                                    <p className="text-sm text-slate-400 leading-relaxed">
-                                        Especialista en arquitecturas de datos, ETL pipelines y soluciones de inteligencia de negocio.
-                                        Liderando la visión técnica para transformar datos en activos estratégicos.
+                                <div className="p-10 text-center bg-[#0F0F0F]">
+                                    <h3 className="text-2xl font-medium tracking-tight text-white mb-2">Jony R.</h3>
+                                    <p className="text-slate-500 text-sm font-mono tracking-widest uppercase mb-6">Founder & Lead Engineer</p>
+                                    <p className="text-sm text-slate-400 font-light leading-relaxed">
+                                        Especialista en arquitecturas cloud y soluciones de software escalables.
+                                        Liderando la visión técnica para transformar organizaciones en potencias digitales.
                                     </p>
                                 </div>
                             </div>
@@ -119,18 +119,18 @@ export const About = () => {
                 </section>
 
                 {/* CTA */}
-                <section className="py-20 px-8">
-                    <div className="max-w-4xl mx-auto text-center bg-gradient-to-r from-blue-900/50 to-violet-900/50 p-12 rounded-3xl border border-blue-500/20 backdrop-blur-sm">
-                        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-500 mb-6 shadow-lg shadow-blue-500/50">
-                            <Rocket className="w-8 h-8 text-white" />
+                <section className="py-32 px-8 border-t border-[#1A1A1A]">
+                    <div className="max-w-4xl mx-auto text-center bg-[#0F0F0F] p-16 rounded-3xl border border-[#1A1A1A] relative overflow-hidden group">
+                        <div className="absolute inset-0 bg-gradient-to-br from-slate-800/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        <div className="relative z-10">
+                            <h2 className="text-4xl font-medium tracking-tight text-white mb-6">¿Listo para transformar tu negocio?</h2>
+                            <p className="text-lg text-slate-400 font-light mb-10 max-w-2xl mx-auto">
+                                Únete a las empresas que ya están liderando el mercado con nuestras soluciones y arquitecturas a medida.
+                            </p>
+                            <a href="/contacto" className="inline-block px-10 py-4 bg-slate-100 text-slate-900 font-medium rounded-full hover:bg-white shadow-[0_0_20px_rgba(255,255,255,0.05)] transition-all">
+                                Hablemos de su proyecto
+                            </a>
                         </div>
-                        <h2 className="text-3xl font-bold text-white mb-6">¿Listo para transformar tu negocio?</h2>
-                        <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
-                            Únete a las empresas que ya están liderando el mercado con nuestras soluciones.
-                        </p>
-                        <a href="/contacto" className="inline-block px-8 py-4 bg-white text-blue-900 font-bold rounded-full hover:bg-blue-50 transition-colors">
-                            Hablemos hoy mismo
-                        </a>
                     </div>
                 </section>
             </main>

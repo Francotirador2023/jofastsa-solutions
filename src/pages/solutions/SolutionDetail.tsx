@@ -92,17 +92,17 @@ export const SolutionDetail = () => {
 
     if (!solution) {
         return (
-            <div className="min-h-screen bg-slate-950 flex items-center justify-center text-white">
+            <div className="min-h-screen bg-[#0A0A0A] flex items-center justify-center text-white">
                 <div className="text-center">
-                    <h1 className="text-4xl font-bold mb-4">Solución no encontrada</h1>
-                    <Link to="/" className="text-blue-400 hover:text-blue-300">Volver al inicio</Link>
+                    <h1 className="text-4xl font-medium tracking-tight mb-4">Solución no encontrada</h1>
+                    <Link to="/" className="text-slate-400 hover:text-white transition-colors">Volver al inicio</Link>
                 </div>
             </div>
         );
     }
 
     return (
-        <div className="min-h-screen bg-slate-950 text-slate-50">
+        <div className="min-h-screen bg-[#0A0A0A] text-slate-50">
             <Navbar />
 
             <main className="pt-20">
@@ -130,11 +130,11 @@ export const SolutionDetail = () => {
                             animate={{ opacity: 1, y: 0 }}
                             className="max-w-3xl"
                         >
-                            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent mb-6">
+                            <h1 className="text-5xl md:text-6xl font-medium tracking-tight bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent mb-6">
                                 {solution.title}
                             </h1>
-                            <p className="text-2xl text-blue-200 mb-6 font-light">{solution.subtitle}</p>
-                            <p className="text-lg text-slate-400 leading-relaxed mb-8">
+                            <p className="text-2xl text-slate-300 mb-6 font-light">{solution.subtitle}</p>
+                            <p className="text-lg font-light text-slate-400 leading-relaxed mb-8">
                                 {solution.description}
                             </p>
                         </motion.div>
@@ -142,14 +142,14 @@ export const SolutionDetail = () => {
                 </section>
 
                 {/* Process & Demo Section */}
-                <section className="py-20 bg-slate-900/50">
+                <section className="py-20 relative border-t border-[#1A1A1A]">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="grid lg:grid-cols-2 gap-16 items-start">
 
                             {/* Process Steps */}
                             <div>
-                                <h2 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
-                                    <Layers className="text-blue-500" /> Procedimiento de Mejora
+                                <h2 className="text-3xl font-medium tracking-tight text-white mb-8 flex items-center gap-3">
+                                    <Layers className="text-slate-400" /> Procedimiento de Mejora
                                 </h2>
                                 <div className="space-y-6">
                                     {solution.steps.map((step, index) => (
@@ -158,12 +158,12 @@ export const SolutionDetail = () => {
                                             initial={{ opacity: 0, x: -20 }}
                                             whileInView={{ opacity: 1, x: 0 }}
                                             transition={{ delay: index * 0.1 }}
-                                            className="flex items-center gap-4 p-4 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-blue-500/30 transition-colors"
+                                            className="flex items-center gap-4 p-4 rounded-xl bg-[#0F0F0F] border border-[#1A1A1A] hover:border-slate-700 transition-colors"
                                         >
-                                            <div className="w-8 h-8 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-sm">
-                                                {index + 1}
+                                            <div className="w-8 h-8 rounded-lg bg-[#222222] text-slate-300 flex items-center justify-center font-medium tracking-wide text-xs">
+                                                0{index + 1}
                                             </div>
-                                            <span className="text-slate-200 font-medium">{step}</span>
+                                            <span className="text-slate-200 font-light">{step}</span>
                                         </motion.div>
                                     ))}
                                 </div>
@@ -171,14 +171,14 @@ export const SolutionDetail = () => {
 
                             {/* Interactive Demo Placeholder */}
                             <div className="relative">
-                                <h2 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
+                                <h2 className="text-3xl font-medium tracking-tight text-white mb-8 flex items-center gap-3">
                                     <PlayCircle className="text-emerald-500" /> Demo Interactiva
                                 </h2>
 
                                 {!isDemoActive ? (
                                     <div
                                         onClick={() => setIsDemoActive(true)}
-                                        className="aspect-video rounded-3xl overflow-hidden bg-slate-800 border-2 border-slate-700 relative group cursor-pointer shadow-2xl shadow-blue-900/20"
+                                        className="aspect-video rounded-3xl overflow-hidden bg-[#0A0A0A] border rounded-2xl border-[#1A1A1A] relative group cursor-pointer"
                                     >
                                         <img
                                             src={solution.demoImage}
@@ -254,10 +254,10 @@ export const SolutionDetail = () => {
                     </div>
                 </section>
 
-                <div className="py-20 text-center">
-                    <h3 className="text-2xl font-bold text-white mb-6">¿Listo para escalar?</h3>
-                    <Link to="/contacto" className="inline-flex px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-semibold transition-all hover:scale-105">
-                        Agendar Consultoría Gratuita
+                <div className="py-24 border-t border-[#1A1A1A] text-center">
+                    <h3 className="text-2xl font-medium tracking-tight text-white mb-8">¿Listo para escalar la arquitectura de su negocio?</h3>
+                    <Link to="/contacto" className="inline-flex px-8 py-4 rounded-full bg-slate-100 hover:bg-white text-slate-900 font-medium transition-all shadow-[0_0_20px_rgba(255,255,255,0.05)]">
+                        Agendar Consultoría
                     </Link>
                 </div>
             </main>

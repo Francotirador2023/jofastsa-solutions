@@ -40,10 +40,10 @@ function App() {
             </div>
           } />
 
-          <Route path="/portafolio" element={<div className="bg-slate-950 min-h-screen"><Navbar /><div className="pt-20"><Portfolio /><Contact /></div><Footer /></div>} />
-          <Route path="/servicios" element={<div className="bg-slate-950 min-h-screen"><Navbar /><div className="pt-20"><Services /><Contact /></div><Footer /></div>} />
+          <Route path="/portafolio" element={<div className="min-h-screen"><Navbar /><div className="pt-20"><Portfolio /><Contact /></div><Footer /></div>} />
+          <Route path="/servicios" element={<div className="min-h-screen"><Navbar /><div className="pt-20"><Services /><Contact /></div><Footer /></div>} />
           <Route path="/nosotros" element={<About />} />
-          <Route path="/contacto" element={<div className="bg-slate-950 min-h-screen"><Navbar /><div className="pt-20"><Contact /></div><Footer /></div>} />
+          <Route path="/contacto" element={<div className="min-h-screen"><Navbar /><div className="pt-20"><Contact /></div><Footer /></div>} />
           <Route path="/soluciones/:slug" element={<SolutionDetail />} />
           <Route path="/portafolio/:slug" element={<CaseStudy />} />
 
@@ -81,7 +81,7 @@ function App() {
           } />
 
           {/* Catch all */}
-          <Route path="*" element={<div className="min-h-screen flex items-center justify-center bg-slate-950 text-white">404 - Not Found</div>} />
+          <Route path="*" element={<div className="min-h-screen flex items-center justify-center text-white">404 - Not Found</div>} />
 
         </Routes>
       </Router>

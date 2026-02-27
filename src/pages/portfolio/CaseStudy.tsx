@@ -138,13 +138,13 @@ export const CaseStudy = () => {
     };
 
     return (
-        <div className="min-h-screen bg-slate-950 text-slate-50">
+        <div className="min-h-screen bg-[#0A0A0A] text-slate-50">
             <Navbar />
 
             <main className="pt-20">
                 <section className="relative h-[60vh] overflow-hidden">
-                    <img src={study.image} alt={study.title} className="w-full h-full object-cover opacity-40" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent" />
+                    <img src={study.image} alt={study.title} className="w-full h-full object-cover opacity-40 mix-blend-luminosity" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/50 to-transparent" />
 
                     <div className="absolute bottom-0 left-0 right-0 p-8 md:p-16">
                         <div className="max-w-7xl mx-auto">
@@ -155,15 +155,15 @@ export const CaseStudy = () => {
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
                             >
-                                <div className="flex gap-2 mb-4">
+                                <div className="flex gap-2 mb-4 relative z-10">
                                     {study.tags.map((tag) => (
-                                        <span key={tag} className="px-3 py-1 rounded-full bg-blue-600 text-white text-sm font-medium">
+                                        <span key={tag} className="px-3 py-1 rounded-full bg-[#141414] border border-[#222222] text-slate-300 text-xs font-mono tracking-wider">
                                             {tag}
                                         </span>
                                     ))}
                                 </div>
-                                <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">{study.title}</h1>
-                                <p className="text-xl text-slate-300 max-w-2xl">{study.description}</p>
+                                <h1 className="text-4xl md:text-6xl font-medium tracking-tight text-white mb-4 relative z-10">{study.title}</h1>
+                                <p className="text-xl text-slate-300 font-light max-w-2xl relative z-10">{study.description}</p>
                             </motion.div>
                         </div>
                     </div>
@@ -173,39 +173,42 @@ export const CaseStudy = () => {
                     <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-16">
                         <div className="lg:col-span-2 space-y-12">
                             <div>
-                                <h3 className="text-2xl font-bold text-white mb-4">El Desafío</h3>
-                                <p className="text-slate-400 text-lg leading-relaxed">{study.challenge}</p>
+                                <h3 className="text-2xl font-medium tracking-tight text-white mb-4">El Desafío</h3>
+                                <p className="text-slate-400 text-lg font-light leading-relaxed">{study.challenge}</p>
                             </div>
                             <div>
-                                <h3 className="text-2xl font-bold text-white mb-4">Nuestra Solución</h3>
-                                <p className="text-slate-400 text-lg leading-relaxed">{study.solution}</p>
+                                <h3 className="text-2xl font-medium tracking-tight text-white mb-4">Nuestra Solución</h3>
+                                <p className="text-slate-400 text-lg font-light leading-relaxed">{study.solution}</p>
                             </div>
                         </div>
 
                         <div className="space-y-8">
-                            <div className="bg-slate-900 border border-slate-800 rounded-2xl p-8">
-                                <h3 className="font-bold text-white mb-6">Resultados Clave</h3>
+                            <div className="bg-[#0A0A0A] border border-[#1A1A1A] rounded-2xl p-8">
+                                <h3 className="font-medium tracking-tight text-white mb-6">Resultados Clave</h3>
                                 <div className="space-y-6">
                                     {study.results.map((result, i) => (
                                         <div key={i} className="flex items-center gap-4">
-                                            <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400">
-                                                <result.icon className="w-6 h-6" />
+                                            <div className="w-12 h-12 rounded-xl bg-[#141414] border border-[#222222] flex items-center justify-center text-slate-300">
+                                                <result.icon className="w-5 h-5" />
                                             </div>
                                             <div>
-                                                <p className="text-2xl font-bold text-white">{result.value}</p>
-                                                <p className="text-sm text-slate-500">{result.label}</p>
+                                                <p className="text-2xl font-medium tracking-tight text-white">{result.value}</p>
+                                                <p className="text-sm font-light text-slate-500">{result.label}</p>
                                             </div>
                                         </div>
                                     ))}
                                 </div>
                             </div>
 
-                            <div className="bg-gradient-to-br from-blue-600 to-violet-600 rounded-2xl p-8 text-center text-white">
-                                <h3 className="font-bold text-xl mb-4">¿Tienes un proyecto similar?</h3>
-                                <p className="text-blue-100 mb-6 text-sm">Convertimos tus ideas en casos de éxito.</p>
-                                <Link to="/contacto" className="inline-block w-full py-3 bg-white text-blue-600 font-bold rounded-lg hover:shadow-lg transition-all">
-                                    Cotizar Ahora
-                                </Link>
+                            <div className="bg-[#0F0F0F] border border-[#1A1A1A] rounded-2xl p-8 text-center text-white relative overflow-hidden group">
+                                <div className="absolute inset-0 bg-gradient-to-br from-slate-800/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                <div className="relative z-10">
+                                    <h3 className="font-medium tracking-tight text-xl mb-3">¿Tienes un proyecto similar?</h3>
+                                    <p className="text-slate-400 font-light text-sm mb-6">Convertimos ideas complejas en realidades digitales.</p>
+                                    <Link to="/contacto" className="inline-block w-full py-3 bg-slate-100 text-slate-900 font-medium rounded-lg hover:bg-white transition-colors duration-300">
+                                        Cotizar Ahora
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </div>

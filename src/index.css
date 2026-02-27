@@ -5,16 +5,20 @@
   --color-foreground: var(--foreground);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap');
+
 :root {
-  --background: #030712;
-  --foreground: #f8fafc;
+  --background: #0A0A0A; /* Premium Carbon Black */
+  --foreground: #EDEDED; /* Soft Gray instead of pure white */
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', 'Inter', system-ui, sans-serif;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased; /* Crisp text rendering */
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @utility text-balance {
