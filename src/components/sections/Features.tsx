@@ -37,7 +37,7 @@ const features = [
 
 export const Features = () => {
     return (
-        <section className="py-24 bg-slate-950 relative overflow-hidden">
+        <section className="py-24 bg-slate-950 relative overflow-hidden" id="caracteristicas">
             {/* Background elements consistent with Premium+ style */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-[10%] left-[-5%] w-[30%] h-[30%] bg-blue-500/5 rounded-full blur-[100px]" />
